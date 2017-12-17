@@ -1,0 +1,30 @@
+ls=[1,2]
+
+for i in range(2,1009):
+    ls.append(ls[i-1]+ls[i-2])
+
+while(True):
+    try:
+        n,m=input().split()
+        n = int(n)
+        m= int(m)
+        
+    except:
+        break
+
+    if(n==0 and m==0):
+        break
+
+    cont=0;
+
+    i=0;
+
+    while(True):
+        if(ls[i]>=n and ls[i]<=m):
+            cont+=1
+        if(ls[i]>m):
+            break
+        i+=1
+        
+
+    print(cont)
